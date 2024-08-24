@@ -5,9 +5,27 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
+      <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+      />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" style="padding: 1rem"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
+
+<style>
+    //@supports (bottom: env(safe-area-inset-bottom)){
+    //    #app {
+    //        padding-bottom: constant(safe-area-inset-bottom);
+    //        padding-bottom: env(safe-area-inset-bottom);
+    //    }
+    //}
+
+    .van-theme-dark body {
+      color: #f5f5f5;
+      background-color: black;
+    }
+</style>
 </html>
