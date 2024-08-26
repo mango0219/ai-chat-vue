@@ -25,6 +25,15 @@ export function loginApi(params:any) {
     });
 }
 
+export function logoutApi(params:any) {
+    return fetch({
+        url: '/user/logout/'+ params.id,
+        method: 'get',
+        loading: true
+    });
+}
+
+
 export function verifyTokenApi(params:any) {
     return fetch({
         url: '/user/verifyToken',

@@ -32,5 +32,6 @@ app.use(List);
 app.use(Icon);
 app.use(FloatingBubble);
 app.use(SwipeCell);
+// app.use(showConfirmDialog);
 
 app.mount('#app')

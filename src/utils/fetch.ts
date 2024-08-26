@@ -62,8 +62,12 @@ const fetch = (option:any) => {
                 removeLocalItem("user_id");
                 removeLocalItem("user_name");
                 showFailToast(response.data.msg);
-                setTimeout(()=>{ router.push("/index")},2000);
-                return new Promise(() => {});
+                // router.push("/index");
+                setTimeout(()=>{
+                    toast.close();
+                    router.push("/index"); },1000);
+                // return new Promise(() => {});
+                return Promise.reject(new Error(response.data.msg));
             }
             return response.data;
         },
